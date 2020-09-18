@@ -1,8 +1,9 @@
 package ex3.ex3;
 
-import java.io.IOException;
 
 public class Book {
+    public double x;
+    public double y;
     public String author;
     public String  name;
     public int age;
@@ -14,10 +15,23 @@ public class Book {
         this.age= age;
     }
 
-    public void Author() throws IOException {
-int a;
-a = System.in.read();
-        System.out.println("Введите автора - " + a);
-
+    public void Author(String name, String author) {
+System.out.println("Великий писатель " + author.toUpperCase()
+        + " написал замечальное произведение "
+        +name.toUpperCase());
     }
+
+
+    public int Year(int age){
+
+        return 2020 - age;
+    }
+
+    public void Age(int age) {
+
+        System.out.println("книга была написанна в "
+            + age
+            + " и ее возраст составляет" + " " + Year(age) + " лет" );}
+
+
 }
