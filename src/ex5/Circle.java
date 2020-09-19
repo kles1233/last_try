@@ -3,7 +3,7 @@ package ex5;
     public class Circle extends Shape {
     private double radius;
     private double f;
-    private double s;
+
 
         public Circle(String color, double radius) {
             super(color);
