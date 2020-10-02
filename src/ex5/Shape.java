@@ -12,6 +12,10 @@ package ex5;
             this.color = color;
         }
 
+        public Shape() {
+
+        }
+
         public abstract double getPerimiter();
         public abstract double getArea();
         public abstract String toString();

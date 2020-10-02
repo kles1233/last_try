@@ -10,10 +10,30 @@ public class Head {
         this.forma = forma;
     }
 
-    public void Hairworks(){
 
-        System.out.println("Волосы умеет двигаться (в играх)");
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getForma() {
+        return forma;
+    }
+
+    public void setForma(String forma) {
+        this.forma = forma;
+    }
+
+    @Override
+    public String toString() {
+        return "Head =>" +
+                " Name=" + name +
+                ", Form of head =" + forma +
+                '}';
 
 
     }

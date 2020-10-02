@@ -14,6 +14,7 @@ public class Rectangle extends Shape {
         super(color);
     }
 
+
     public double getWidth() {
         return width;
     }

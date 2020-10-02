@@ -1,15 +1,20 @@
 package ex3.ex2;
 
 public class Human {
-    public static void main(String[] args) {
-
-Leg leg = new Leg("любимый Артем",11);
-leg.Dvigat();
-        Head head = new Head("любимый Антон","Кривая");
-        head.Hairworks();
-        Hand hand = new Hand("нелюбимый Вова",1);
-hand.Sgibat();
-
-
+    private Head Head;
+    private Leg Leg;
+    private Hand Hand;
+    public Human(Head Head, Leg Leg, Hand Hand){
+        this.Head = Head;
+        this.Leg = Leg;
+        this.Hand = Hand;
+    }
+    @Override
+    public String toString() {
+        return "Human{" +
+                "Head=" + Head +
+                ", Leg=" + Leg +
+                ", Hand=" + Hand +
+                '}';
     }
 }

@@ -1,35 +1,26 @@
 package ex3.ex1;
 
 public class Circle {
-    public double x;
+        double pi = Math.PI;
 
-    public double y;
+        double radius;
 
-    public double r;
+        public Circle(double radius)
+        {
+            this.radius = radius;
+        }
+        public void setRadius(double radius) {
+            this.radius = radius;
+        }
 
-
-    public void printCircle() {
-
-        System.out.println("Окружность с центром ("+x+";"+y+") и радиусом "+r);
-
-    }
-
-
-
-    public void moveCircle(double a, double b) {
-
-        x = x + a;
-
-        y = y + b;
-
-    }
-
-
-
-    public void zoomCircle(double k) {
-
-        r = r * k;
-
-    }
-
+        public double getRadius() {
+            return radius;
+        }
+        @Override
+        public String toString() {
+            return "Circle raduis => "
+                    +
+                    "radius = " + radius +
+                    ';';
+        }
 }
