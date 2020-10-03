@@ -1,50 +1,40 @@
 package ex78;
 import static java.lang.Math.*;
+import java.util.Random;
 
-public class Manager implements EmployeePosition {
+    public class Manager extends Employee implements EmployeePosition {
+        private int income;
 
-private String tittle;
+        public Manager(double baseSalary) {
+            Title = "Manager";
+            Random r = new Random();
+            income = 100000 + r.nextInt(25000);
+            Company.income += income;
+            salary = calcSalary(baseSalary);
+        }
 
-    private int  salary;
-     private int moneycompany;
 
+        public int getIncome() {
+            return income;
+        }
 
-    public String getTittle() {
-        return tittle;
+        @Override
+        public String getTitle() {
+            return super.getTitle();
+        }
+
+        @Override
+        public double calcSalary(double baseSalary) {
+            Random r = new Random();
+            double bonus = 0.05 * income;
+            return bonus + baseSalary;
+        }
+
+        @Override
+        public String toString() {
+            return "Manager =>" +
+                    "income=" + income +
+                    ", salary=" + salary +
+                    ", Title='" + Title + '\'';
+        }
     }
-
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
-
-        System.out.print( getJobTitle("Manager"));
-    }
-
-    public int getMoneycompany() {
-        return moneycompany;
-    }
-
-    public void setMoneycompany(int moneycompany) {
-        this.moneycompany = moneycompany;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
- private int Salary(){
-    int a = 115000;
-    int b = 140000;
-
-     moneycompany= (a + (int) (random() * b))*5/100;
-     System.out.print(moneycompany);
-
-return moneycompany;
-
-}
-}
-
-

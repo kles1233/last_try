@@ -1,44 +1,53 @@
 package ex78;
 
 public class Employee  {
-    private String name;
-    private String second_name;
-    private String tittle;
-    private int salary;
+    protected String lastname;
+    protected String firstname;
+    protected double salary;
+    protected String Title;
 
-
-    public String getName() {
-        return name;
+    public Employee() {
+        this.salary = salary;
+        this.Title = Title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Employee(String lastname, String firstname) {
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.salary = salary;
+        this.Title = Title;
     }
 
-    public String getSecond_name() {
-        return second_name;
-    }
-
-    public void setSecond_name(String second_name) {
-        this.second_name = second_name;
-    }
-
-
-    public String getTittle() {
-        return tittle;
-    }
-
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
-    }
-
-
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public String getFirstname() {
+        return firstname;
+    }
+    public String getTitle() {
+        return Title;
     }
 
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Employee =>" +
+                "lastname='" + lastname + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", salary=" + salary +
+                ", jobTitle='" + Title +'\'';
+    }
 }
